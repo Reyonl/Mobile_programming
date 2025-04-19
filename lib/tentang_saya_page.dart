@@ -5,39 +5,66 @@ class tentang_saya_page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tentang Saya'),
+        title: Text('Tentang Saya', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+        backgroundColor: Colors.blueAccent,
+        centerTitle: true,
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            // Foto profil
+            // Foto Profil dengan efek shadow
             Center(
               child: CircleAvatar(
-                radius: 60,
-                backgroundImage: AssetImage('assets/images/books.jpg'),
+                radius: 90,
+                backgroundImage: AssetImage('assets/images/reyon.jpg'),
+                backgroundColor: Colors.transparent,
               ),
             ),
             SizedBox(height: 16),
-            // Nama dan info
+            
+            // Nama dan Info dengan font yang lebih menarik
             Text(
               'Halo! Saya Reyon Lau Jiemin.',
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 26, 
+                fontWeight: FontWeight.bold, 
+                color: Colors.blueAccent,
+                letterSpacing: 1.2,
+              ),
+              textAlign: TextAlign.center,
             ),
             SizedBox(height: 12),
             Text(
               'NIM: 221011401453',
-              style: TextStyle(fontSize: 18),
+              style: TextStyle(fontSize: 18, color: Colors.grey[700]),
             ),
             Text(
               'Kelas: 06tplp004',
-              style: TextStyle(fontSize: 18),
+              style: TextStyle(fontSize: 18, color: Colors.grey[700]),
             ),
             SizedBox(height: 20),
+            
+            // Deskripsi dengan text alignment center
             Text(
               'Saya adalah mahasiswa yang sedang belajar Flutter untuk membuat aplikasi mobile keren!',
-              style: TextStyle(fontSize: 16),
+              style: TextStyle(fontSize: 16, color: Colors.black87),
               textAlign: TextAlign.center,
+            ),
+            
+            SizedBox(height: 30),
+
+            // Tombol "Kontak" dengan desain yang modern
+            ElevatedButton(
+              onPressed: () {
+                // aksi ketika tombol diklik (misal membuka kontak)
+              },
+              child: Text('Kontak Saya'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueAccent, // Ganti "primary" dengan "backgroundColor"
+                padding: EdgeInsets.symmetric(horizontal: 40, vertical: 12),
+                textStyle: TextStyle(fontSize: 18),
+              ),
             ),
           ],
         ),
