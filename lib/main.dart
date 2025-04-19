@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'tentang_saya_page.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -43,40 +45,30 @@ class MyHomePage extends StatelessWidget {
                   SizedBox(height: 10),
                   Text(
                     'Nama: Reyon Lau Jiemin',
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+                    style: TextStyle(color: const Color.fromARGB(255, 0, 4, 8), fontSize: 16),
                   ),
                   Text(
                     'NIM: 221011401453',
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+                    style: TextStyle(color: const Color.fromARGB(255, 10, 38, 47), fontSize: 16),
                   ),
                   Text(
                     'Kelas: 06tplp004',
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+                    style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0), fontSize: 16),
                   ),
                 ],
               ),
             ),
-            ListTile(
-              leading: Icon(Icons.person),
-              title: Text('Tentang Saya'),
-              onTap: () {
-                showDialog(
-                  context: context,
-                  builder: (context) {
-                    return AlertDialog(
-                      title: Text('Tentang Saya'),
-                      content: Text('Halo! Saya Reyon Lau Jiemin, mahasiswa yang sedang belajar Flutter.'),
-                      actions: [
-                        TextButton(
-                          onPressed: () => Navigator.pop(context),
-                          child: Text('Tutup'),
-                        ),
-                      ],
-                    );
-                  },
-                );
-              },
-            ),
+           ListTile(
+            leading: Icon(Icons.person),
+            title: Text('Tentang Saya'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => tentang_saya_page()),
+              );
+            },
+          ),
+
           ],
         ),
       ),
