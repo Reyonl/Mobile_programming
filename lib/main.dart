@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'TentangSayaPage.dart';
 
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -10,11 +9,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Hello World',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(title: 'Tugas Mata Kuliah MP'),
+      title: 'Project Flutter Reyon ',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: MyHomePage(title: 'Tugas Reyon Lau'),
     );
   }
 }
@@ -26,9 +23,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
+      appBar: AppBar(title: Text(title)),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -40,35 +35,51 @@ class MyHomePage extends StatelessWidget {
                 children: [
                   Text(
                     'Tentang Saya',
-                    style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontFamily:'Itim-Regular',
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   SizedBox(height: 10),
                   Text(
                     'Nama: Reyon Lau Jiemin',
-                    style: TextStyle(color: const Color.fromARGB(255, 0, 4, 8), fontSize: 16),
+                    style: TextStyle(
+                      fontFamily:'Itim-Regular',
+                      color: const Color.fromARGB(255, 0, 4, 8),
+                      fontSize: 16,
+                    ),
                   ),
                   Text(
                     'NIM: 221011401453',
-                    style: TextStyle(color: const Color.fromARGB(255, 10, 38, 47), fontSize: 16),
+                    style: TextStyle(
+                      fontFamily:'Itim-Regular',
+                      color: const Color.fromARGB(255, 10, 38, 47),
+                      fontSize: 16,
+                    ),
                   ),
                   Text(
                     'Kelas: 06tplp004',
-                    style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0), fontSize: 16),
+                    style: TextStyle(
+                      fontFamily:'Itim-Regular',
+                      color: const Color.fromARGB(255, 0, 0, 0),
+                      fontSize: 16,
+                    ),
                   ),
                 ],
               ),
             ),
-           ListTile(
-            leading: Icon(Icons.person),
-            title: Text('Tentang Saya'),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => TentangSayaPage()),
-              );
-            },
-          ),
-
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text('Tentang Saya'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TentangSayaPage()),
+                );
+              },
+            ),
           ],
         ),
       ),
@@ -78,18 +89,12 @@ class MyHomePage extends StatelessWidget {
           children: [
             Text(
               'Nama : Reyon Lau Jiemin',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 24,fontFamily:'Itim-Regular', fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 10),
-            Text(
-              'NIM : 221011401453',
-              style: TextStyle(fontSize: 20),
-            ),
+            Text('NIM : 221011401453', style: TextStyle(fontSize: 20,fontFamily:'Itim-Regular')),
             SizedBox(height: 10),
-            Text(
-              'Kelas : 06tplp004',
-              style: TextStyle(fontSize: 18),
-            ),
+            Text('Kelas : 06tplp004', style: TextStyle(fontSize: 18,fontFamily:'Itim-Regular')),
           ],
         ),
       ),

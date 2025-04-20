@@ -22,6 +22,12 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
+  fonts:
+    - family: Itim-Regular
+      fonts:
+        - asset: assets/fonts/Itim-Regular.ttf
+          weight: 400
+
   assets:
     - assets/images/books.jpg
     - assets/images/reyon.jpg
