@@ -1,6 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class tentang_saya_page extends StatelessWidget {
+class TentangSayaPage extends StatelessWidget {
+  // Fungsi untuk membuka URL Instagram
+  Future<void> _launchURL() async {
+    const url = 'https://www.instagram.com/reyonlau_?igsh=MTMzdjJ6enZyM2U4Yw==';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Tidak dapat membuka URL $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,6 +77,21 @@ class tentang_saya_page extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 40, vertical: 12),
                 textStyle: TextStyle(fontSize: 18),
               ),
+            ),
+            
+            SizedBox(height: 30),
+
+            // Tombol Instagram dengan logo Instagram
+            IconButton(
+              icon: FaIcon(FontAwesomeIcons.instagram, size: 50, color: Colors.pink),
+              onPressed: _launchURL,
+              padding: EdgeInsets.all(16),
+              splashRadius: 30,
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Follow me on Instagram',
+              style: TextStyle(fontSize: 16, color: Colors.black87),
             ),
           ],
         ),
