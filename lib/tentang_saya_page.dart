@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class TentangSayaPage extends StatelessWidget {
+class tentang_saya_page extends StatelessWidget {
   // Fungsi untuk membuka URL Instagram
   Future<void> _launchURL() async {
     const url = 'https://www.instagram.com/reyonlau_?igsh=MTMzdjJ6enZyM2U4Yw==';

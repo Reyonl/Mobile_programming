@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'TentangSayaPage.dart';
+import 'tentang_saya_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -76,7 +76,7 @@ class MyHomePage extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => TentangSayaPage()),
+                  MaterialPageRoute(builder: (context) => tentang_saya_page()),
                 );
               },
             ),
