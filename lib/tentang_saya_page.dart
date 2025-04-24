@@ -5,13 +5,17 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class tentang_saya_page extends StatelessWidget {
   // Fungsi untuk membuka URL Instagram
   Future<void> _launchURL() async {
-    const url = 'https://www.instagram.com/reyonlau_?igsh=MTMzdjJ6enZyM2U4Yw==';
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Tidak dapat membuka URL $url';
-    }
+  const nativeUrl = 'instagram://user?username=reyonlau_';
+  const webUrl = 'https://www.instagram.com/reyonlau_/';
+
+  if (await canLaunch(nativeUrl)) {
+    await launch(nativeUrl); // Buka lewat app Instagram
+  } else if (await canLaunch(webUrl)) {
+    await launch(webUrl); // Fallback ke web browser
+  } else {
+    throw 'Tidak dapat membuka Instagram.';
   }
+}
 
   @override
   Widget build(BuildContext context) {
